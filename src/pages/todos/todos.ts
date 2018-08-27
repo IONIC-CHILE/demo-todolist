@@ -15,11 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TodosPage {
 
+  public todos: any[];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TodosPage');
+    this.todos= [
+      {
+        description: "Esto es una tarea",
+        isDone: true
+      },
+      {
+        description: "Esto es una tarea",
+        isDone: false
+      }
+    ]
   }
 
 }
