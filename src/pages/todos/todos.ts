@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TodoModel } from '../../shared/todo-model';
 
 /**
  * Generated class for the TodosPage page.
@@ -15,21 +16,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TodosPage {
 
-  public todos: any[];
+  public todos: TodoModel[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     this.todos= [
-      {
-        description: "Esto es una tarea",
-        isDone: true
-      },
-      {
-        description: "Esto es una tarea",
-        isDone: false
-      }
+     new TodoModel("Esto es un elemento"),
+     new TodoModel("Esto es un elemento"),
+     new TodoModel("Esto es un elemento"),
+     new TodoModel("Esto es un elemento", true),
+     new TodoModel("Esto es un elemento", true, true),
     ]
   }
 
