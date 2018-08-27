@@ -10,11 +10,13 @@ import { AddTaskModalPage } from '../pages/add-task-modal/add-task-modal';
 
 import { HttpModule } from '@angular/http';
 import { TodoServiceProvider } from '../providers/todo-service/todo-service';
+import { PrioritizedTodosPipe } from '../pipes/prioritized-todos/prioritized-todos'
 
 @NgModule({
   declarations: [
     MyApp,
     TodosPage,
+    PrioritizedTodosPipe,
     AddTaskModalPage
   ],
   imports: [
