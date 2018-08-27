@@ -49,8 +49,10 @@ export class TodosPage {
     let modal = this.modal.create(AddTaskModalPage, {todo:todo});
     modal.present();
     modal.onDidDismiss(data =>{
-      //
-    })
+      if(data){
+        this.todoService.updateTodo(todo, data);
+      }
+    });
   }
   
 
