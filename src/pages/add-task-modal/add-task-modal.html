@@ -6,7 +6,7 @@
 -->
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Add new</ion-title>
+    <ion-title>{{title}}</ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()" >
         <ion-icon name="md-close" ></ion-icon>
@@ -38,7 +38,7 @@
 
       <div class="sumit-button">
         <button ion-button block type="submit"
-        [disabled]="!descriptionState.valid">Add</button>
+        [disabled]="!descriptionState.valid">{{buttonText}}</button>
       </div>
    
     </form>

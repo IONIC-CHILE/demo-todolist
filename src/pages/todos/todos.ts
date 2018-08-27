@@ -44,6 +44,14 @@ export class TodosPage {
   toogleTodo(todo: TodoModel){
     this.todoService.toogleTodo(todo);
   }
+
+  showEditTodo(todo: TodoModel){
+    let modal = this.modal.create(AddTaskModalPage, {todo:todo});
+    modal.present();
+    modal.onDidDismiss(data =>{
+      //
+    })
+  }
   
 
   showAddTodo(){
