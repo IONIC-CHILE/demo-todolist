@@ -10,8 +10,7 @@
     <ion-title>Add new</ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()" >
-        <span color="secundary" shoWhen="ios"></span>
-        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+        <ion-icon name="md-close" ></ion-icon>
       </button>
     </ion-buttons>
   </ion-toolbar>
@@ -21,19 +20,26 @@
 
 <ion-content padding>
   <ion-list no-lines class="container">
-
+    
+    <form (ngSubmit)="submit()">
+      
       <ion-item>
         <ion-input placeholder="Task description" clearInput 
-        [(ngModel)] = "model.description"></ion-input>
+        [(ngModel)] = "model.description"  name="description" required></ion-input>
       </ion-item>
+
       <ion-item> 
         <ion-label>Is Important</ion-label>
-        <ion-checkbox color="dark" [(ngModel)] = "model.isImportant"></ion-checkbox>
+        <ion-checkbox color="dark" [(ngModel)] = "model.isImportant" name="isImportant"></ion-checkbox>
       </ion-item>
 
       <div class="sumit-button">
-        <button ion-button block (click)="submit()">Add</button>
+        <button ion-button block type="submit">Add</button>
       </div>
+   
+    </form>
+
+
   </ion-list>
   
 </ion-content>

@@ -51,6 +51,16 @@ export class TodosPage {
     console.log("hi");
     let modal = this.modal.create(AddTaskModalPage);
     modal.present();
+    
+    modal.onDidDismiss(data =>{
+      if(data){
+        this.addtodo(data);
+      }
+    })
+  }
+
+  addtodo(todo:TodoModel){
+    this.todos.push(todo);
   }
 
   

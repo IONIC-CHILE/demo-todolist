@@ -25,12 +25,14 @@ export class AddTaskModalPage {
     console.log('ionViewDidLoad AddTaskModalPage');
   }
 
-  dismiss(){
-    this.viewCtrl.dismiss()
+  submit(){
+    this.viewCtrl.dismiss(this.model);
   }
 
-  submit(){
-    console.log(this.model);
+  dismiss(){
+    this.viewCtrl.dismiss(this.model);
   }
+
+  
 
 }
