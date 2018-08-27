@@ -37,6 +37,10 @@ export class TodosPage {
     return styles;
   }
 
+  removeTodo(todo: TodoModel){
+    this.todoService.removeTodo(todo)
+  }
+
   toogleTodo(todo: TodoModel){
     this.todoService.toogleTodo(todo);
   }

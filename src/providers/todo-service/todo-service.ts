@@ -31,9 +31,17 @@ export class TodoServiceProvider {
   toogleTodo(item: TodoModel){
     item.isDone = ! item.isDone;
   }
-  
+
   addtodo(todo:TodoModel){
     this.todos.push(todo);
+  }
+
+  removeTodo(todo: TodoModel){
+    const index = this.todos.indexOf(todo);
+    this.todos = [
+      ...this.todos.slice(0, index),
+      ...this.todos.slice(index+1)
+    ]
   }
 
  
