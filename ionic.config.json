@@ -1,0 +1,8 @@
+{
+  "name": "demotodo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "ec787b32"
+}
