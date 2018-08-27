@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-      <ion-item *ngFor="let todo of todos" [style.font-weight]="600">
+      <ion-item *ngFor="let todo of todos" [ngStyle]="setTodoStyle(todo)">
         {{todo.description}}
       </ion-item>
   </ion-list>
